@@ -1,5 +1,5 @@
 node  {
-    def Author = 'Bhavya'
+    def Author = 'Bhavya Patel'
 
     stage('Clean WS') {
         sh 'echo "Cleaning WorkSpace"'
