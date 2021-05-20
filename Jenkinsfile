@@ -21,10 +21,4 @@ node  {
         }
     }
 
-     stage('Package') {
-        withMaven(jdk: 'jdk8', maven:'m3') {
-            sh 'mvn package'
-        }
-    }
-
 }
