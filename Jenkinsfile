@@ -15,9 +15,9 @@ pipeline{
     parameters {
         choice(name: 'ENVIRONMENT TO DEPLOY', choice: ['Windows', 'Linux', 'MacOS'], description: 'Select a Env to deploy')
     }
-    triggers {
-        pollSCM('* * * * *')
-    }
+   // triggers {
+     //   pollSCM('* * * * *')
+    //}
 
      tools{
         maven  'm3'
