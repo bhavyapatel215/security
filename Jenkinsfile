@@ -1,7 +1,7 @@
 //declarative pipeline code
 
 pipeline{
-    agent any
+    agent { label 'master' }
     environment {
         APP_HOME='/var/www/html'
         PRAGRA_BATCH='devops'
