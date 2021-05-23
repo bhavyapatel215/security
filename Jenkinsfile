@@ -7,12 +7,11 @@ pipeline{
         PRAGRA_BATCH='devops'
     }
 
-    options {
-        quitePeriod(10)
-        
-    }
+   // options {
+     //   quitePeriod(10)
+   // }
     parameters {
-        choice(name: 'ENVIRONMENT TO DEPLOY', choice: ['Windows', 'Linux', 'MacOS'], description: 'Select a Env to deploy')
+        choice(name: 'ENVIRONMENT TO DEPLOY',choices: ['Windows', 'Linux', 'MacOS'], description: 'Select a Env to deploy')
     }
    // triggers {
      //   pollSCM('* * * * *')
