@@ -41,7 +41,7 @@ pipeline{
     post {
         changed {
             echo '**** Something is WRONG !! ****** '
-            echo "${BRANCH_NAME}  : ${JOB_NAME}"
+            // echo "${BRANCH_NAME}  : ${JOB_NAME}"
         }
     }
 }
