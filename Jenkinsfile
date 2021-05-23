@@ -28,7 +28,7 @@ pipeline{
                 GIT_REPO='https://github.com/bhavyapatel215/security.git'
         }
             steps {
-                git "${GIT_REPO}"
+            checkout scm
             }
         }
         stage('Package') {
