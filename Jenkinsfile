@@ -37,13 +37,12 @@ pipeline{
                 sh 'mvn package'
             }
         }
+    }
     
-        post {
-            changed {
+    post {
+        changed {
             echo '**** Something is WRONG !! ****** '
             echo "${BRANCH_NAME}  : ${JOB_NAME}"
-            }
         }
-
     }
 }
