@@ -2,7 +2,6 @@
 
 pipeline{
     agent any
-    
     environment {
         APP_HOME='/var/www/html'
         PRAGRA_BATCH='devops'
@@ -29,21 +28,22 @@ pipeline{
             environment{
                 GIT_REPO='https://github.com/bhavyapatel215/security.git'
         }
-         steps {
+            steps {
                 git "${GIT_REPO}"
             }
-    }
-     stage('Package') {
+        }
+        stage('Package') {
             steps {
                 sh 'mvn package'
             }
         }
-    post {
-        changed {
+    
+        post {
+            changed {
             echo '**** Something is WRONG !! ****** '
             echo "${BRANCH_NAME}  : ${JOB_NAME}"
+            }
         }
-     }
 
-}
+    }
 }
