@@ -1,7 +1,7 @@
 //declarative pipeline code
 
 pipeline{
-    
+    agent any
     options { 
         quietPeriod(30) 
     }
