@@ -44,7 +44,7 @@ pipeline{
         }
         stage('Deploy Container on dev_server') {
             environment { 
-                dockerRUN = 'docker container run --name myapp -p 6001:8080 -d bhavyapatel215/myapp:1.0.0'
+                dockerRUN = 'sh /home/ubuntu/dockerRUN.sh'
                 }
             steps {
                 sshagent(['dev_server']) {
